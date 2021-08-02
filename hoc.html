@@ -1,0 +1,64 @@
+<html>
+ <head>
+    <title>HOF example</title>
+ </head>
+
+ <script> 
+     // buy beers
+     const buyBeer = () =>{
+      console.log(`%c  ---- Beer ----------`,
+     'background: #222; color: #FF0000')      
+     console.log(`walk to beer section`)    
+     console.log(`got  confused`)    
+     console.log(`buy 10 caroluse`)    
+     return [10,2]
+     }
+
+     // buy diapers
+     const buyDiaper = () =>{
+      console.log(`%c  ---- Diaper ----------`,
+     'background: #222; color: #FF0000')      
+     console.log(`walk to kids section`)    
+     console.log(`got  confused`)    
+     console.log(`call my wife`)    
+     console.log(`still get confused so ask help`)    
+     console.log(`buy 2 diapers`)    
+     return [2,2]
+     }
+
+     // buy diapers
+     const buyVegetables = () =>{
+      console.log(`%c  ---- Vegetables ----------`,
+     'background: #222; color: #FF0000')      
+     console.log(`walk to cold section`)    
+     console.log(`bought vegetables like ninja`)    
+     console.log(`buy 5 Vegetables`)    
+     return [5,24]
+     }
+
+
+     // pay
+     const pay =( arrFActivities )=> {
+
+      let finalCost = 0
+
+      arrFActivities.forEach( (cur) => { 
+         let [qty,price] = cur()  
+       finalCost= finalCost + (qty*price)
+     } )
+
+      // do the calulation
+      console.log(`open the wallet`)
+      console.log(`give the card`)
+      console.log(`pay : ${finalCost}`)
+
+     }
+ 
+    pay( [buyBeer, buyDiaper,buyVegetables] )
+
+ </script>
+
+ <body>
+    <h1>How to think Functionally ? </h1> 
+ </body>
+</html>
